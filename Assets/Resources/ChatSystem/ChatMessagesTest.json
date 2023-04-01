@@ -1,0 +1,29 @@
+﻿{
+  "chatMessage": {
+    "scenes": [
+      {
+        "sceneA": [{
+          "1": {
+            "message": "this is a test message for sceneA",
+            "skip-able": false,
+            "name": "Jeff"
+          }
+        }],
+        "sceneB": [{
+          "1": {
+            "message": "this is a test message for sceneB",
+            "skip-able": false,
+            "name": "billy",
+            "picturePath": "chatPictures/billy_profile"
+          }
+        }],
+        "sceneC": [{
+          "1": {
+            "message": "this is a test message for sceneC",
+            "skip-able": false
+          }
+        }]
+      }
+    ]
+  }
+}

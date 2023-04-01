@@ -1,0 +1,167 @@
+﻿{
+  "chatMessage": {
+    "scenes": [
+      {
+        "sceneA": [{
+          "1": {
+            "message": "Hey Cutie Bear",
+            "skip-able": false,
+            "photoPath" : "cute-pfp-31",
+            "name": "Rus"
+          },
+          "2": {
+            "message": "Hi Cutie Froggy",
+            "skip-able": true,
+            "photoPath" : "cutie-2",
+            "name": "Aicha"
+          },
+          "3": {
+            "message": "What's Up Sugar?",
+            "skip-able": false,
+            "photoPath" : "cute-pfp-31",
+          },
+          "4": {
+            "message": "Not Much and you?",
+            "skip-able": true,
+            "photoPath" : "cutie-2",
+            "name": "Aicha"
+          },
+          "5": {
+            "message": "Nothing bbs",
+            "skip-able": false,
+            "photoPath" : "cute-pfp-31",
+            "name": "Rus"
+          },
+          "6": {
+            "message": "That's good",
+            "skip-able": true,
+            "photoPath" : "cutie-2",
+            "name": "Aicha"
+          },
+          "7": {
+            "message": "Get your tits out cutie?",
+            "skip-able": false,
+            "photoPath": "cute-pfp-31",
+            "name": "Rus"
+          },
+          "8": {
+            "message": "no bb you've been a bad boy :(",
+            "skip-able": true,
+            "photoPath" : "cutie-2",
+            "name": "Aicha"
+          },
+          "9": {
+            "message": "what how! *angry boi*",
+            "skip-able": false,
+            "photoPath": "cute-pfp-31",
+            "name": "Rus"
+          },
+          "10": {
+            "message": "you've not spent any time with me today :(",
+            "skip-able": true,
+            "photoPath" : "cutie-2",
+            "name": "Aicha"
+          },
+          "11": {
+            "message": "that's not true! I give you lovin' all the time :@",
+            "skip-able": false,
+            "photoPath": "cute-pfp-31",
+            "name": "Rus"
+          },
+          "12": {
+            "message": "you are a liar boy!",
+            "skip-able": true,
+            "photoPath" : "cutie-2",
+            "name": "Aicha"
+          },
+          "13": {
+            "message": "no :'(",
+            "skip-able": false,
+            "photoPath": "cute-pfp-31",
+            "name": "Rus"
+          },
+          "14": {
+            "message": "come on bbs, i give you lovin' all the time",
+            "skip-able": false,
+            "photoPath": "cute-pfp-31",
+            "name": "Rus"
+          },
+          "15": {
+            "message": "okay then bbs, since I know that you do, and you got me chicky nuggies",
+            "skip-able": true,
+            "photoPath" : "cutie-2",
+            "name": "Aicha"
+          },
+          "16": {
+            "message": "( * )( * )",
+            "skip-able": true,
+            "photoPath" : "cutie-2",
+            "name": "Aicha"
+          },
+          "17": {
+            "message": "oh yeaaaaaah!",
+            "skip-able": false,
+            "photoPath": "cute-pfp-31",
+            "name": "Rus"
+          },
+          "18": {
+            "message": "thank you bb, I'm happy boi now :)",
+            "skip-able": false,
+            "photoPath": "cute-pfp-31",
+            "name": "Rus"
+          },
+          "19": {
+            "message": "No probs bb",
+            "skip-able": true,
+            "photoPath" : "cutie-2",
+            "name": "Aicha"
+          }
+        }],
+        "sceneB": [{
+          "1": {
+            "message": "Hello World, I am a test message 1B",
+            "skip-able": false
+          },
+          "2": {
+            "message": "Hello World, I am a test message 2B",
+            "skip-able": true
+          },
+          "3": {
+            "message": "Hello World, I am a test message 3B",
+            "skip-able": false
+          },
+          "4": {
+            "message": "Hello World, I am a test message 4B",
+            "skip-able": true
+          },
+          "5": {
+            "message": "Hello World, I am a test message 5B",
+            "skip-able": false
+          }
+        }],
+        "sceneC": [{
+          "1": {
+            "message": "Hello World, I am a test message 1C",
+            "skip-able": false
+          },
+          "2": {
+            "message": "Hello World, I am a test message 2C",
+            "skip-able": true
+          },
+          "3": {
+            "message": "Hello World, I am a test message 3C",
+            "skip-able": false
+          },
+          "4": {
+            "message": "Hello World, I am a test message 4C",
+            "skip-able": true
+          },
+          "5": {
+            "message": "Hello World, I am a test message 5C",
+            "skip-able": false
+          }
+        }]
+      }
+    ]
+  }
+}
