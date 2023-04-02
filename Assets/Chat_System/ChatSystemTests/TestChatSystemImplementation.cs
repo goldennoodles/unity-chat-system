@@ -109,10 +109,12 @@ namespace Chat_System.ChatSystemTests
             LogAssert.Expect(LogType.Error, "ChatMessage with ID: 1, already exists, attempting to recover");
             LogAssert.Expect(LogType.Error, "ChatMessage with ID: 1, already exists, attempting to recover");
             
-            Assert.True(orderedList[0].GetMessage == "this is a test message for sceneA", "Message Index 1");
-            Assert.True(orderedList[1].GetMessage == "some message1", "Message Index 1");
-            Assert.True(orderedList[2].GetMessage == "some message3", "Message Index 1");
-            Assert.True(orderedList[3].GetMessage == "some message2", "Message Index 1");
+            
+            orderedList.ForEach(e=> Debug.Log(e.ToString()));
+            Assert.True(orderedList[0].GetMessage == "\"this is a test message for sceneA\"", "Message Index 1");
+            Assert.True(orderedList[1].GetMessage == "some message1");
+            Assert.True(orderedList[2].GetMessage == "some message3");
+            Assert.True(orderedList[3].GetMessage == "some message2");
         }
         
         [Test]
@@ -129,7 +131,7 @@ namespace Chat_System.ChatSystemTests
             LogAssert.Expect(LogType.Error, "ChatMessage with ID: 3, already exists, attempting to recover");
             LogAssert.Expect(LogType.Error,"ChatMessage with ID: 1, already exists, attempting to recover");
             
-            Assert.True(orderedList[0].GetMessage == "this is a test message for sceneA", "Message Index 1");
+            Assert.True(orderedList[0].GetMessage == "\"this is a test message for sceneA\"", "Message Index 1");
             Assert.True(orderedList[1].GetMessage == "some message1", "Message Index 1");
             Assert.True(orderedList[2].GetMessage == "some message3", "Message Index 1");
             Assert.True(orderedList[3].GetMessage == "some message2", "Message Index 1");

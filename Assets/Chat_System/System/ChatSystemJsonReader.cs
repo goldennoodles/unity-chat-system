@@ -57,7 +57,7 @@ namespace Chat_System.System
                 {
                     foreach (var xScene in scenes[0][sceneName]![i]?.Children().Values()!)
                     {
-                        String message = xScene.Value<string>("message");
+                        String message = "\"" + xScene.Value<string>("message") + "\"";
                         bool isSkippable = xScene.Value<bool>("skip-able");
 
                         string name = xScene.Value<string>("name");

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Chat_System.Exceptions;
 using Chat_System.Model;
@@ -20,13 +21,12 @@ namespace Chat_System.System
 
         public void AddChatMessage(string scene, ChatMessageDto chatMessageDto)
         {
-
             if (!CheckChatMessageValidity(chatMessageDto, scene) &&
-                _chatMessages.Values.Any(e=> e.Contains(chatMessageDto)))
+                _chatMessages.Values.Any(e => e.Contains(chatMessageDto)))
                 return;
 
             DuplicatedIDVerification(chatMessageDto, scene);
-            
+
             Debug.Log(
                 $"Adding Message With MessageIndex: {chatMessageDto.GetOrderID}, and Scene {scene}, to cache");
         }
@@ -83,7 +83,7 @@ namespace Chat_System.System
             {
                 if (_chatMessages[scene].Any(e => e.GetOrderID == chatMessageDto.GetOrderID))
                     throw new ChatMessageInvalidException(chatMessageDto);
-                
+
                 chatMessages.Add(chatMessageDto);
             }
             catch (ChatMessageInvalidException)
