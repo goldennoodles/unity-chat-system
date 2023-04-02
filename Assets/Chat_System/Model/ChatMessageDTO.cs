@@ -1,21 +1,18 @@
-using System.Collections.Generic;
-using System.Linq;
-using Codice.Client.BaseCommands;
-using Codice.CM.SemanticMerge.Gui;
-using Unity.Plastic.Newtonsoft.Json.Linq;
+using System;
 using UnityEngine;
 
 namespace Chat_System.Model
 {
+    [Serializable]
     public record ChatMessageDto
     {
-        private int _orderID;
-        private Scene _scene;
+        [SerializeField] private int _orderID;
+        [SerializeField] private Scene _scene;
 
-        private string _name;
-        private string _message;
-        private string _picturePath;
-        private bool _skipAble;
+        [SerializeField] private string _name;
+        [SerializeField] private string _message;
+        [SerializeField] private string _picturePath;
+        [SerializeField] private bool _skipAble;
 
         public ChatMessageDto(int orderID, Scene scene, string message, bool skipAble)
         {
@@ -42,6 +39,7 @@ namespace Chat_System.Model
         public int GetOrderID => _orderID;
         public Scene GetScene => _scene;
         public string GetName => _name;
+        public void SetName(string name) => _name = name;
         public string GetPicturePath => _picturePath;
         public string GetMessage => _message;
         public bool IsSkippable => _skipAble;

@@ -7,115 +7,115 @@
             "message": "Hey Cutie Bear",
             "skip-able": false,
             "photoPath" : "cute-pfp-31",
-            "name": "Rus"
+            "name": "player"
           },
           "2": {
             "message": "Hi Cutie Froggy",
             "skip-able": true,
             "photoPath" : "cutie-2",
-            "name": "Aicha"
+            "name": "Sam"
           },
           "3": {
             "message": "What's Up Sugar?",
             "skip-able": false,
             "photoPath" : "cute-pfp-31",
-            "name": "Rus"
+            "name": "player"
           },
           "4": {
             "message": "Not Much and you?",
             "skip-able": true,
             "photoPath" : "cutie-2",
-            "name": "Aicha"
+            "name": "Sam"
           },
           "5": {
             "message": "Nothing bbs",
             "skip-able": false,
             "photoPath" : "cute-pfp-31",
-            "name": "Rus"
+            "name": "player"
           },
           "6": {
             "message": "That's good",
             "skip-able": true,
             "photoPath" : "cutie-2",
-            "name": "Aicha"
+            "name": "Sam"
           },
           "7": {
             "message": "Get your tits out cutie?",
             "skip-able": false,
             "photoPath": "cute-pfp-31",
-            "name": "Rus"
+            "name": "player"
           },
           "8": {
             "message": "no bb you've been a bad boy :(",
             "skip-able": true,
             "photoPath" : "cutie-2",
-            "name": "Aicha"
+            "name": "Sam"
           },
           "9": {
             "message": "what how! *angry boi*",
             "skip-able": false,
             "photoPath": "cute-pfp-31",
-            "name": "Rus"
+            "name": "player"
           },
           "10": {
             "message": "you've not spent any time with me today :(",
             "skip-able": true,
             "photoPath" : "cutie-2",
-            "name": "Aicha"
+            "name": "Sam"
           },
           "11": {
             "message": "that's not true! I give you lovin' all the time :@",
             "skip-able": false,
             "photoPath": "cute-pfp-31",
-            "name": "Rus"
+            "name": "player"
           },
           "12": {
             "message": "you are a liar boy!",
             "skip-able": true,
             "photoPath" : "cutie-2",
-            "name": "Aicha"
+            "name": "Sam"
           },
           "13": {
             "message": "no :'(",
             "skip-able": false,
             "photoPath": "cute-pfp-31",
-            "name": "Rus"
+            "name": "player"
           },
           "14": {
             "message": "come on bbs, i give you lovin' all the time",
             "skip-able": false,
             "photoPath": "cute-pfp-31",
-            "name": "Rus"
+            "name": "player"
           },
           "15": {
             "message": "okay then bbs, since I know that you do, and you got me chicky nuggies",
             "skip-able": true,
             "photoPath" : "cutie-2",
-            "name": "Aicha"
+            "name": "Sam"
           },
           "16": {
             "message": "( * )( * )",
             "skip-able": true,
             "photoPath" : "cutie-2",
-            "name": "Aicha"
+            "name": "Sam"
           },
           "17": {
             "message": "oh yeaaaaaah!",
             "skip-able": false,
             "photoPath": "cute-pfp-31",
-            "name": "Rus"
+            "name": "player"
           },
           "18": {
             "message": "thank you bb, I'm happy boi now :)",
             "skip-able": false,
             "photoPath": "cute-pfp-31",
-            "name": "Rus"
+            "name": "player"
           },
           "19": {
             "message": "No probs bb",
             "skip-able": true,
             "photoPath" : "cutie-2",
-            "name": "Aicha"
+            "name": "Sam"
           }
         }],
         "sceneB": [{

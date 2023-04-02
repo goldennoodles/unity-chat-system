@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Chat_System.Model;
 using Chat_System.System;
 using TMPro;
@@ -7,25 +9,33 @@ using UnityEngine.UI;
 
 namespace Chat_System
 {
+    [RequireComponent(typeof(PlayerDetails))]
     public class ChatSystemManager : MonoBehaviour
     {
         public TextMeshProUGUI messageHolder;
         public GameObject rawImage;
         public GameObject nameTag;
 
-        private List<ChatMessageDto> _chatMessages;
+        public List<ChatMessageDto> _chatMessages;
         private ChatMessageSystem _chatMessageSystem;
         private int chatMessageIndex = 0;
+        
+        public static event EventHandler OnEndOfScene;
 
         private void Start()
         {
+
             _chatMessageSystem = new ChatMessageSystem(new ChatSystemJsonReader("ChatMessage"));
             _chatMessages = _chatMessageSystem.RetrieveAllChatMessagesInOrderForScene(Scene.sceneA);
-
-            ChatMessageDto chatMessage = GetMessage(chatMessageIndex);
-            messageHolder.text = $"{chatMessage.GetMessage}";
             
-            CheckDisplayUnits(chatMessage);
+            var chatMessage = GetMessage(chatMessageIndex);
+            
+            PlayerDetails.OnPlayerNameChange += (sender, playerName) =>
+            {
+                ChangePlayerName(playerName);
+                CheckDisplayUnits(chatMessage);
+                messageHolder.text = $"{chatMessage.GetMessage}";
+            };
         }
 
         private void Update()
@@ -56,20 +66,30 @@ namespace Chat_System
             IncrementAndShowNextMessage();
         }
 
-        private bool isEndOfScene()
+        private void ChangePlayerName(string playerName)
         {
-            if (chatMessageIndex >= _chatMessages.Count - 1)
+            var i = 0;
+            foreach (var chatMessage in _chatMessages.Where(e => e.GetName == "player"))
             {
-                Debug.Log("End Of Scene");
-                return true;
+                i++;
+                chatMessage.SetName(playerName);
             }
 
-            return false;
+            Debug.Log($"Changed: {i} objects, to have name: {playerName}");
+        }
+
+        private bool IsEndOfScene()
+        {
+            if (chatMessageIndex < _chatMessages.Count - 1) return false;
+            Debug.Log("End Of Scene");
+            OnEndOfScene?.Invoke(this, EventArgs.Empty);
+            return true;
+
         }
 
         private void IncrementAndShowNextMessage()
         {
-            if (isEndOfScene()) return;
+            if (IsEndOfScene()) return;
             
             ++chatMessageIndex;
                 
@@ -78,7 +98,6 @@ namespace Chat_System
             
             messageHolder.text = chatMessage.GetMessage;
         }
-
 
         private ChatMessageDto GetMessage(int index)
         {

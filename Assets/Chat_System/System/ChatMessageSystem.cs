@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Chat_System.Exceptions;
 using Chat_System.Model;
-using Mono.Cecil;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Chat_System.System
 {
@@ -13,7 +10,7 @@ namespace Chat_System.System
     {
         private readonly Dictionary<string, List<ChatMessageDto>> _chatMessages;
         private readonly ChatSystemRecoveryImplementation _chatSystemRecoveryImplementation = new();
-
+        
         public ChatMessageSystem(ChatSystemJsonReader jsonReader)
         {
             _chatMessages = jsonReader.PopulateDictionaryWithChatMessagesFromJson();
