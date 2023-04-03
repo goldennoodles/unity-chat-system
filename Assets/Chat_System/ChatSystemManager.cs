@@ -25,7 +25,7 @@ namespace Chat_System
         private void Start()
         {
 
-            _chatMessageSystem = new ChatMessageSystem(new ChatSystemJsonReader("ChatMessage"));
+            _chatMessageSystem = new ChatMessageSystem(new ChatSystemJsonReader("ChatMessages"));
             _chatMessages = _chatMessageSystem.RetrieveAllChatMessagesInOrderForScene(Scene.sceneA);
             
             var chatMessage = GetMessage(chatMessageIndex);
@@ -52,7 +52,7 @@ namespace Chat_System
                 rawImage.SetActive(false);
             else
                 rawImage.GetComponent<RawImage>().texture =
-                    _chatMessageSystem.LoadImage(chatMessage);
+                    _chatMessageSystem.LoadImage(chatMessage, "Samples");
             
             if (chatMessage.GetName == null)
                 nameTag.SetActive(false);

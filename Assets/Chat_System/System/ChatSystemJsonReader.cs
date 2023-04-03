@@ -18,7 +18,7 @@ namespace Chat_System.System
 
         private JArray GetJsonArray()
         {
-            string filePath = $"ChatSystem/{_fileName}";
+            string filePath = $"ChatSystem/Messages/{_fileName}";
             String json = Resources.Load<TextAsset>(filePath).ToString();
 
             JObject jsonConverted = JObject.Parse(json);

@@ -15,7 +15,7 @@ namespace Chat_System.ChatSystemTests
         [SetUp]
         public void Setup()
         {
-            _chatMessageSystem = new ChatMessageSystem(new ChatSystemJsonReader("ChatMessagesTest"));
+            _chatMessageSystem = new ChatMessageSystem(new ChatSystemJsonReader("Test/ChatMessagesTest"));
         }
         
         [Test]

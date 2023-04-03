@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Chat_System.Exceptions;
 using Chat_System.Model;
@@ -65,9 +66,16 @@ namespace Chat_System.System
             throw new ChatMessageNotFoundException("Unable to retrieve ChatMessages, No Data Found");
         }
 
+        public Texture LoadImage(ChatMessageDto chatMessageDto, string subPath)
+        {
+            string pathRoot = $"ChatSystem/Pictures/{subPath}/" + chatMessageDto.GetPicturePath;
+            return Resources.Load<Texture2D>(pathRoot);
+        }
+        
         public Texture LoadImage(ChatMessageDto chatMessageDto)
         {
-            string pathRoot = "ChatSystem/ChatPictures/" + chatMessageDto.GetPicturePath;
+            string pathRoot = "ChatSystem/Pictures/" + chatMessageDto.GetPicturePath;
+            Debug.Log(pathRoot);
             return Resources.Load<Texture2D>(pathRoot);
         }
 
